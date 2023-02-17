@@ -53,6 +53,8 @@ main {
 .container {
 	display: flex;
 	flex-wrap: wrap;
+	display: flex;
+  	justify-content: center;
 }
 
 .box {
@@ -77,6 +79,7 @@ main {
 	background-color: #3b3b3b;
 	border-top: 1px solid #333333;
 	border-radius: 10px;
+	align-items: center;
 }
 
 .box img {
