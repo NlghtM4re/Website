@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Nightm4re Hub</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="website icon" type="png" href="images/icon.png">
+		<style>
+			.resetButton {
+				background-color: #5683ad;
+				border: none;
+				color: white;
+				padding: 15px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				border-radius: 5px;
+				position: absolute;
+				right: 57px;
+				font-size: 20px;
+				 
+			}
+
+			.resetButton:hover {
+				background-color: #4a7399;
+			}
+		</style>
+	</head>	
+	<body>
+		<header>
+			<div class="navbar">
+				<div class="subnav">
+				  <a class="subnavbtn" href="index.html">Home</a>
+				</div> 
+				<div class="subnav">
+				  <a class="subnavbtn" href="links.html">Links</a>
+				</div> 
+				<div class="subnav">
+				  <a class="subnavbtn" href="Edit.html">Edit</a>
+				</div> 
+				<div class="subnav">
+				  <button class="subnavbtn">Otherㅤ<i class="fa fa-caret-down"></i></button>
+				  <div class="subnav-content">
+					<a href="javaScript.html">JavaScript</a>
+					<a href="cssGod.html">css God</a>
+				  </div>
+				</div>
+			  </div>
+		</header>
+		<main>
+			<h2>Edit the css page:</h1>
+			<h4>Try to modify the text!</h3>
+			<button class="buttonToEdit"></button>
+			<a class="resetButton" href="Edit.html">Reset</a>
+			<div class="container">
+				<style class="styleBox" spellcheck="false"contenteditable="">html {
+	background-color: #7ba4ca;
+}
+
+header {
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 36px;
+	text-shadow: 2px 2px 4px black;
+}
+
+main {
+	padding: 50px;
+}
+
+.buttonToEdit:after {
+  content: 'Edit me!';
+}
+
+.buttonToEdit {
+	background-color: #5683ad;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.buttonToEdit:hover {
+	background-color: #4a7399;
+}
+
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+	text-align: left;
+}
+
+.styleBox {
+	display: block; /* dont try to modify this*/
+	white-space: pre; 
+	background-color: #b2cee9;
+	padding: 10px 10px;
+	font-size: 20px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 45%;
+}</style>
+
+<style class="styleBox2" class="animate__animated animate__fadeInLeft" spellcheck="false"contenteditable="">.styleBox2 {
+	display: block; /* dont try to modify this*/
+	white-space: pre; 
+	background-color: #b2cee9;
+	padding: 10px 10px;
+	font-size: 20px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 45%;
+}
+
+.navbar {
+	background-color: #6490b9;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+  }
+
+.subnav {
+	display: inline-block;
+	position: relative;
+	margin: 0 auto;
+	}
+
+.subnavbtn {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 10px 12px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0 5px;
+	cursor: pointer;
+	transition: color .2s;
+}
+
+.subnavbtn:hover {
+	background-color: #4a7399;
+	border-radius: 5px;	
+}
+
+.subnav-content {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	background-color: #5683ad;
+	border-radius: 5px;
+	top: 100%;
+	left: 0;
+	right: 0;
+}
+
+.subnav-content a {
+	font-size: 16px;
+	color: white;
+	padding: 6px 12px;
+	text-decoration: none;
+	display: block;
+}
+
+.subnav-content a:hover {
+	background-color: #3e6991;
+	border-radius: 5px;
+}
+
+.subnav:hover .subnav-content {
+	display: block;
+	border-radius: 5px;
+}
+
+.subnav i {
+	float: right;
+	padding-top: 5px;
+}
+
+.subnav:hover .subnavbtn i {
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+}</style>
+			</div>
+		</main>
+		<footer>
+			
+		</footer>
+	</body>
+</html>
