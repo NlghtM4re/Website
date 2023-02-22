@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Nightm4re Hub</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="website icon" type="png" href="images/icon.png">
+	</head>
+	<body>
+		<h1 class="title">Nightm4re hub</h1>
+		<header>
+			<div class="navbar">
+				<div class="subnav">
+				  <a class="subnavbtn" href="index.html">Home</a>
+				</div> 
+				<div class="subnav">
+				  <a class="subnavbtn" href="links.html">Links</a>
+				</div> 
+				<div class="subnav">
+				  <a class="subnavbtn" href="Edit.html">Edit</a>
+				</div> 
+				<div class="subnav">
+				  <button class="subnavbtn">Otherㅤ<i class="fa fa-caret-down"></i></button>
+				  <div class="subnav-content">
+					<a href="javaScript.html">JavaScript</a>
+					<a href="cssGod.html">css God</a>
+				  </div>
+				</div>
+			  </div>
+		</header>
+		<main>
+            <div class="boxResizer">
+                <p>
+                    <li contenteditable="true" class="resizeText">resize me down right corner</li>
+                    <li contenteditable="true" class="resizeText">change the text color with the color button</li>
+                    <li contenteditable="true" class="resizeText">edit me like you want by clicking on me</li>
+                </p>
+            </div>
+            <div class="colorBox">
+                <button onclick="changeColor('blue')" class="colorButtonBlue">Blue</button>
+                <button onclick="changeColor('red')" class="colorButtonRed">Red</button>
+                <button onclick="gchangeColor('green')" class="colorButtonGreen">Green</button>
+                <button onclick="changeColor('purple')" class="colorButtonPurple">Purple</button>
+                <button onclick="changeColor('yellow')" class="colorButtonYellow">Yellow</button>
+                <button onclick="changeColor('orange')" class="colorButtonOrange">Orange</button>
+                <button onclick="changeColor('black')" class="colorButtonBlack">Black</button>
+                <button onclick="changeColor('white')" class="colorButtonWhite">White</button>
+                <button onclick="changeColor('grey')" class="colorButtonGrey">Grey</button>
+            </div>
+            <div class="magicBox">
+                <button class="magicButton" id="magicButton">Click me!</button>
+				<button class="spamColorButton" onclick="startTimer()">Click to have some fun!</button>
+				<button id="stop-button"onclick="stopTimer()">Stop</button>
+				<button id="reset-button">Stop</button>
+			</div>
+			<br>
+			<div id="message-box">
+				<p>Click somewhere else to place the button back.</p>
+			</div>
+		</main>
+		<footer>
+			<script src="assets/js/script.js"></script>
+		</footer>
+	</body>
+</html>
