@@ -232,4 +232,31 @@ input[type="text"]:focus {
 	outline: none;
 }
 
+.resetSnakeButton {
+	background-color: #48739b;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	position: absolute;
+	left: 850px;
+	color: white;
+}
+
+.resetSnakeButton:hover {
+	cursor: pointer;
+	background-color: #3b638a;
+}
+
+::-webkit-scrollbar {
+	width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+	background-color: #79a8d7;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #436e9a;
+	border-radius: 10px;
+}
 
