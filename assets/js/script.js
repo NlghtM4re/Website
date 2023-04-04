@@ -80,3 +80,11 @@ var intervalId;
         clearInterval(intervalId);
         document.documentElement.style.backgroundColor = originalBackground;
       });
+
+function CopyEmail() {
+  var copyText = document.getElementById("emailInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  alert("copied to clipboard!");
+}

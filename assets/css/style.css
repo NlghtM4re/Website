@@ -1,5 +1,6 @@
 * {
 	text-decoration: none;
+	font-family: Bahnschrift;
 }
 
 html {
@@ -32,6 +33,7 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: white;
   }
 
 .subnav {
@@ -200,6 +202,34 @@ th, td {
 
 th {
 	color: white;
+}
+
+.copyButton {
+	background-color: #487eb1;
+	color: white;
+	border: none;
+	padding: 5px;
+	border-radius: 5px;
+	position: absolute;
+	top: 211px;
+	left: 890px;
+}
+
+.copyButton:hover {
+	background-color: #4177a9;
+	cursor: pointer;
+}
+
+.emailText {
+	background-color: rgba(255, 255, 255, 0);
+	color: white;
+	border: none;
+	width: 14.1%;
+
+}
+
+input[type="text"]:focus {
+	outline: none;
 }
 
 
