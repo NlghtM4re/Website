@@ -30,7 +30,7 @@
           <button class="subnavbtn">Gameㅤ<i class="fa fa-caret-down"></i></button>
           <div class="subnav-content">
             <a href="SnakeGame.html">Snake</a>
-    <a href="PongGame.html">Pong</a>
+            <a href="PongGame.html">Pong</a>
           </div>
         </div>
         <div class="subnav">
@@ -39,61 +39,51 @@
             <a href="javaScript.html">JavaScript</a>
             <a href="cssGod.html">CSS God</a>
             <a href="Edit.html">Edit Page</a>
-            <a href="CPSTest.html">Cps Test</a>
           </div>
         </div>
       </div>
     </header>
     <main>	
-		<h1>Anime Leaderboard</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Rank</th>
-                    <th>Name</th>
-                    <th>Episodes watched</th>
-                    <th>Time to watch</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>One Piece</td>
-                    <td>1056</td>
-                    <td>3 months</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Attack on Titan</td>
-                    <td>89</td>
-                    <td>9 days</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Black Clover</td>
-                    <td>170</td>
-                    <td>16 days</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>My Hero Academia</td>
-                    <td>78</td>
-                    <td>7 days</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Demon Slayer</td>
-                    <td>44</td>
-                    <td>3 days</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Naruto</td>
-                    <td>720</td>
-                    <td>2 months</td>
-                </tr>
-            </tbody>
-	</table>
+      <div id='CPScontainer'>
+        <p id='t' readonly>0 Cps</p>
+        <p id='n' readonly>0 Best Cps</p>
+        <p id='m' readonly>Clicks: 0</p>
+      </div>
+      <div id='clicker' onclick='press()'>Click Me</div>
     </main>
+    <footer>
+      <script>
+        var bestcps = 0;
+var clicksthissecond = 0;
+var clicks = 0;
+
+if (localStorage.getItem('bestcps') != undefined) {
+  bestcps = localStorage.getItem('bestcps');
+  clicks = localStorage.getItem('clicks');
+  document.getElementById('n').innerHTML = bestcps + ' Best Cps';
+  document.getElementById('m').innerHTML = 'Clicks: ' + clicks;
+}
+
+setInterval(function () {
+  var cps = clicksthissecond;
+  if (cps > bestcps) {
+    bestcps = cps;
+    document.getElementById('n').innerHTML = bestcps + ' Best Cps';
+    localStorage.setItem('bestcps', bestcps);
+  }
+  document.getElementById('t').innerHTML = cps + ' Cps';
+  clicksthissecond = 0;
+}, 1000);
+
+function press() {
+  clicksthissecond++;
+  clicks++;
+  document.getElementById('m').innerHTML = 'Clicks: ' + clicks;
+  localStorage.setItem('clicks', clicks);
+}
+
+
+      </script>
+    </footer>
   </body>
 </html>

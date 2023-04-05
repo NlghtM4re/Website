@@ -7,6 +7,19 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/png" href="images/icon.png">
+    <script>
+      function isMobile() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      }
+
+      if (isMobile()) {
+        if (confirm("This website may not work properly on mobile devices. Do you want to continue?")) {
+          
+        } else {
+          window.location.href = "https://www.google.com";
+        }
+      }
+    </script>
   </head>
   <body>
     <a href="index.html">
@@ -39,6 +52,7 @@
             <a href="javaScript.html">JavaScript</a>
             <a href="cssGod.html">CSS God</a>
             <a href="Edit.html">Edit Page</a>
+            <a href="CPSTest.html">Cps Test</a>
           </div>
         </div>
       </div>
@@ -46,8 +60,7 @@
     <main>	
 		<h2>Welcome to Slave Empire</h2>
 		<h4>Made by Nightm4re#6410</h4>	
-    <h5>Send feedback or ideas for the website at this email "<input type="text" value="slave.empire23@gmail.com" class="emailText" id="emailInput" readonly>"</h5>
-    <button class="copyButton"onclick="CopyEmail()">Copy</button>
+    <h5>Send feedback or ideas for the website at this email "slave.empire23@gmail.com"</h5>
   </main>
   <footer>
     <script src="assets/js/script.js"></script>

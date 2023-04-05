@@ -204,28 +204,10 @@ th {
 	color: white;
 }
 
-.copyButton {
-	background-color: #487eb1;
-	color: white;
-	border: none;
-	padding: 5px;
-	border-radius: 5px;
-	position: absolute;
-	top: 211px;
-	left: 890px;
-}
-
-.copyButton:hover {
-	background-color: #4177a9;
-	cursor: pointer;
-}
-
 .emailText {
 	background-color: rgba(255, 255, 255, 0);
 	color: white;
 	border: none;
-	width: 14.1%;
-
 }
 
 input[type="text"]:focus {
@@ -237,9 +219,11 @@ input[type="text"]:focus {
 	padding: 10px;
 	border-radius: 5px;
 	border: none;
-	position: absolute;
-	left: 850px;
 	color: white;
+	display: flex;
+	justify-content: center;
+	margin-left: 42.17%;
+	width: 14.6%;
 }
 
 .resetSnakeButton:hover {
@@ -260,3 +244,34 @@ input[type="text"]:focus {
 	border-radius: 10px;
 }
 
+#clicker {
+	background-color: #3e6892;
+	border-radius: 20px;
+	display: inline-block;
+	justify-content: center;
+	color: white;
+	font-size: 30px;
+	padding: 100px 300px;
+	-webkit-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;
+}
+
+#clicker:hover {
+	cursor: pointer;
+	background-color: #345e87;
+}
+
+#CPScontainer {
+	display: flex;
+	justify-content: center;
+	color: white;
+}
+
+#t, #n, #m {
+	margin: 10px;
+	-webkit-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;
+	font-size: 22px;
+}
