@@ -275,3 +275,16 @@ input[type="text"]:focus {
   	user-select: none;
 	font-size: 22px;
 }
+
+.update {
+	color: white;
+	display: flex;
+	justify-content: center;
+}
+
+.date {
+	color: white;
+	position: absolute;
+	top: 96%;
+	left: 93%;
+}
