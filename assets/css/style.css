@@ -252,9 +252,25 @@ input[type="text"]:focus {
   	user-select: none;
 }
 
+#clicker:active {
+	animation: clicker 0.2s ease-in-out;
+}
+
+@keyframes clicker{
+	0% {
+		rotate: 2deg;
+	}
+	50% {
+		rotate: -2deg;
+	}
+	100% {
+		rotate: 0deg;
+	}
+}
+
 #clicker:hover {
 	cursor: pointer;
-	background-color: #345e87;
+	background-color: #3a638d;
 }
 
 #CPScontainer {
@@ -271,13 +287,13 @@ input[type="text"]:focus {
 	font-size: 22px;
 }
 
-.update {
+.version {
 	color: white;
 	display: flex;
 	justify-content: center;
 	position: absolute;
-	top: 93%;
-	left: 47%;
+	top: -5px;
+	right: 20px;	
 }
 
 .date {
