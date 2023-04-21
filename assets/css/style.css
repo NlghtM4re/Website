@@ -342,7 +342,7 @@ font-size: 15px;
 }
 
 .popup button:hover {
-background-color: #ddd;
+background-color: rgb(196, 3, 3);
 }
 
 .popup button.continue {
