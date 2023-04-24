@@ -40,6 +40,7 @@
             <a href="cssGod.html">CSS God</a>
             <a href="Edit.html">Edit Page</a>
             <a href="CPSTest.html">Cps Test</a>
+            <a href="CPSTest.html">Dice</a>
             <a href="AdminLogin.html">Admin</a>
           </div>
         </div>
@@ -60,51 +61,7 @@
         </form>
       </div>  
       <footer>
-        <script>
-          const form = document.querySelector('form');
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const username = form.elements['username'].value;
-    const password = form.elements['password'].value;
-
-    if (username === 'slave' && password === '123') {
-      const overlay = document.createElement('div');
-      overlay.classList.add('overlay');
-      document.body.appendChild(overlay);
-      const popup = document.createElement('div');
-      popup.classList.add('popup');
-      popup.textContent = 'Correct! Do you want to continue?';
-      const continueButton = document.createElement('button');
-      continueButton.classList.add('continue');
-      continueButton.textContent = 'Continue';
-      continueButton.addEventListener('click', () => {
-        window.location.href = 'Admin.html';
-      });
-      const cancelButton = document.createElement('button');
-      cancelButton.textContent = 'Cancel';
-      cancelButton.addEventListener('click', () => {
-        document.body.removeChild(popup);
-        document.body.removeChild(overlay);
-      });
-      popup.appendChild(continueButton);
-      popup.appendChild(cancelButton);
-      document.body.appendChild(popup);
-    } else {
-      const overlay = document.createElement('div');
-      overlay.classList.add('overlay');
-      document.body.appendChild(overlay);
-      const popup = document.createElement('div');
-      popup.classList.add('popup');
-      popup.textContent = 'Incorrect username or password. Please try again.';
-      document.body.appendChild(popup);
-      // Close the popup and overlay when clicked outside
-      overlay.addEventListener('click', () => {
-        document.body.removeChild(popup);
-        document.body.removeChild(overlay);
-      });
-    }
-  });
-        </script>
+        <script src="assets/js/script.js"></script>
       </footer>         
   </body>
 </html>
