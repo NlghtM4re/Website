@@ -452,3 +452,56 @@ height: 2px;
 background: linear-gradient(90deg, transparent, #8cb9e5);
 animation: btn-anim1 2s linear infinite;
 }
+
+#incrementText {
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 30px;
+	display: flex;
+	height: 80%;
+	width: 90%;
+	top: 15%;
+	left: 5%;
+	position: absolute;
+	justify-content: center;
+	-webkit-user-select: none; /* Safari */
+ 	-ms-user-select: none; /* IE 10 and IE 11 */
+  	user-select: none; /* Standard syntax */
+}
+
+#incrementTEXT {
+	font-size: 30px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+.incrementCount {
+	font-size: 40px;
+	display: flex;
+	justify-content: center;
+}
+
+/* * {
+	border: red 1px solid;
+} */
+
+.count-animation {
+	animation: count 100ms ease-in forwards;
+}
+
+@keyframes count {
+	0% {
+		transform: rotate(5deg);
+	}
+	33% {
+		transform: rotate(0deg);
+	}
+	66% {
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
