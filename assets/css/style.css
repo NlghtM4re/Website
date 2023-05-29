@@ -57,7 +57,7 @@ header {
 }
 
 .subnavbtn:hover {
-	background-color: #4a7399;
+	background-color: #4a7399b1;
 	border-radius: 5px;	
 }
 
@@ -65,7 +65,7 @@ header {
 	display: none;
 	position: absolute;
 	z-index: 1;
-	background-color: #4c7ead;
+	background-color: #4c7eadba;
 	border-radius: 5px;
 	top: 100%;
 	left: 0;
@@ -81,7 +81,7 @@ header {
 }
 
 .subnav-content a:hover {
-	background-color: #3e6991;
+	background-color: #3e6991b6;
 	border-radius: 5px;
 }
 
@@ -504,4 +504,11 @@ animation: btn-anim1 2s linear infinite;
 		transform: rotate(0deg);
 	}
 }
+
+.Welcome {
+	background-color: #77a4cd;
+	border-radius: 10px;
+	padding: 10px;
+}
+
 
