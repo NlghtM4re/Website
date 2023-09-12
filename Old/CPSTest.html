@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slave Empire</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/png" href="images/icon.png">
+  </head>
+  <body>
+    <a href="index.html">
+      <h1 class="title">Slave Empire</h1>
+    </a>
+    <header>
+      <div class="navbar">
+        <div class="subnav">
+          <a class="subnavbtn" href="index.html">Home</a>
+        </div> 
+        <div class="subnav">
+          <a class="subnavbtn" href="links.html">Links</a>
+        </div> 
+        <div class="subnav">
+          <button class="subnavbtn">Boardㅤ<i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="FlexBoard.html">Anime</a>
+          </div>
+        </div>
+        <div class="subnav">
+          <button class="subnavbtn">Gameㅤ<i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="SnakeGame.html">Snake</a>
+            <a href="PongGame.html">Pong</a>
+          </div>
+        </div>
+        <div class="subnav">
+          <button class="subnavbtn">Otherㅤ<i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="cssGod.html">CSS God</a>
+            <a href="Edit.html">Edit Page</a>
+            <a href="CPSTest.html">Cps Test</a>
+            <a href="dice.html">Dice</a>
+            <a href="click.html">Click</a>
+            <a href="AdminLogin.html">Admin</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>	
+      <div id='CPScontainer'>
+        <p id='t' readonly>0 Cps</p>
+        <p id='n' readonly>0 Best Cps</p>
+        <p id='m' readonly>Clicks: 0</p>
+      </div>
+      <div id='clicker' onclick='press()'>Click Me</div>
+    </main>
+    <footer>
+      <script>
+        var bestcps = 0;
+var clicksthissecond = 0;
+var clicks = 0;
+
+if (localStorage.getItem('bestcps') != undefined) {
+  bestcps = localStorage.getItem('bestcps');
+  clicks = localStorage.getItem('clicks');
+  document.getElementById('n').innerHTML = bestcps + ' Best Cps';
+  document.getElementById('m').innerHTML = 'Clicks: ' + clicks;
+}
+
+setInterval(function () {
+  var cps = clicksthissecond;
+  if (cps > bestcps) {
+    bestcps = cps;
+    document.getElementById('n').innerHTML = bestcps + ' Best Cps';
+    localStorage.setItem('bestcps', bestcps);
+  }
+  document.getElementById('t').innerHTML = cps + ' Cps';
+  clicksthissecond = 0;
+}, 1000);
+
+function press() {
+  clicksthissecond++;
+  clicks++;
+  document.getElementById('m').innerHTML = 'Clicks: ' + clicks;
+  localStorage.setItem('clicks', clicks);
+}
+      </script>
+    </footer>
+  </body>
+</html>

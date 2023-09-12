@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Slave Empire</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="website icon" type="png" href="images/icon.png">
+		<style>
+			.resetButton {
+				background-color: #4172a0;
+				border: none;
+				color: white;
+				padding: 15px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				border-radius: 5px;
+				position: absolute;
+				right: 57px;
+				font-size: 20px;
+			}
+
+			.resetButton:hover {
+				background-color: #305980;
+			}
+			.navbar {
+	/* background-color: #6490b9; */
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+.subnav {
+	display: inline-block;
+	position: relative;
+	margin: 0 auto;
+	}
+
+.subnavbtn {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 10px 12px;
+	background-color: inherit;
+	margin: 0 5px;
+	cursor: pointer;
+	transition: color .2s;
+	font-family: Bahnschrift;
+}
+
+.subnavbtn:hover {
+	background-color: #4a7399;
+	border-radius: 5px;	
+}
+
+.subnav-content {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	background-color: #4c7ead;
+	border-radius: 5px;
+	top: 100%;
+	left: 0;
+	right: 0;
+}
+
+.subnav-content a {
+	font-size: 16px;
+	color: white;
+	padding: 6px 12px;
+	text-decoration: none;
+	display: block;
+}
+
+.subnav-content a:hover {
+	background-color: #3e6991;
+	border-radius: 5px;
+}
+
+.subnav:hover .subnav-content {
+	display: block;
+	border-radius: 5px;
+}
+
+.subnav i {
+	float: right;
+	padding-top: 5px;
+}
+
+.subnav:hover .subnavbtn i {
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+}
+		</style>
+	</head>	
+	<body>
+		<header>
+            <div class="navbar">
+              <div class="subnav">
+                <a class="subnavbtn" href="index.html">Home</a>
+              </div> 
+              <div class="subnav">
+                <a class="subnavbtn" href="links.html">Links</a>
+              </div> 
+              <div class="subnav">
+                <button class="subnavbtn">Boardㅤ<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                  <a href="FlexBoard.html">Anime</a>
+                </div>
+              </div>
+              <div class="subnav">
+                <button class="subnavbtn">Gameㅤ<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                  <a href="SnakeGame.html">Snake</a>
+				  <a href="PongGame.html">Pong</a>
+                </div>
+              </div>
+              <div class="subnav">
+                <button class="subnavbtn">Otherㅤ<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                  <a href="cssGod.html">CSS God</a>
+				  <a href="Edit.html">Edit Page</a>
+				  <a href="CPSTest.html">Cps Test</a>
+				  <a href="dice.html">Dice</a>
+				  <a href="click.html">Click</a>
+				  <a href="AdminLogin.html">Admin</a>
+                </div>
+              </div>
+            </div>
+          </header>
+		<main>
+			<a href="index.html">
+				<h1 class="title">Slave Empire</h1>
+			</a>
+			<h2>Edit the css page:</h1>
+			<h4>Try to modify the text!</h3>
+			<button class="buttonToEdit"></button>
+			<a class="resetButton" href="Edit.html">Reset</a>
+			<div class="container">
+				<style class="styleBox" spellcheck="false" contenteditable="">html {
+	font-family: Bahnschrift;
+	background-color: #5785b1;
+}
+
+header {
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 36px;
+}
+
+.title {
+	position: absolute;
+	top: -5px;
+	left: 25px;
+	color: white;
+	word-wrap: break-word;
+  	white-space: nowrap;
+}
+
+main {
+	padding: 50px;
+	font-family: Bahnschrift;
+}
+
+.styleBox {
+	display: block;
+	white-space: pre;
+	background-color: #b2cee9;
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	position: relative;
+	width: 45%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	position: relative;
+	margin: 10px;
+}
+
+.styleBox::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+	cursor: pointer;
+}</style>
+
+<style class="styleBox" spellcheck="false"contenteditable="">.buttonToEdit:after {
+content: 'Edit me!';
+}
+
+.buttonToEdit {
+	background-color: #4172a0;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 19px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 5px;
+	font-family: Bahnschrift;
+}
+
+.buttonToEdit:hover {
+	background-color: #305980;
+}
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+	text-align: left;
+	width: 100%;
+  	overflow-x: auto;
+}
+.styleBox::-webkit-scrollbar-thumb {
+	background-color: #7cabd6;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.styleBox::-webkit-scrollbar-track {
+	background-color: #4e7ba4;
+	border-radius: 5px;
+	cursor: pointer;
+}
+::-webkit-scrollbar {
+	width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+	background-color: #79a8d7;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #436e9a;
+	border-radius: 10px;
+} </style>
+			</div>
+		</main>
+	</body>
+</html>

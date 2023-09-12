@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header>
+        <div class="navbar">
+            <div class="subnav">
+              <a class="subnavbtn" href="index.html">Home</a>
+            </div> 
+            <div class="subnav">
+              <button class="subnavbtn">Gameㅤ<i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href=".html">-</a>
+                <a href=".html">-</a>
+              </div>
+            </div>
+            <div class="subnav">
+              <button class="subnavbtn">Otherㅤ<i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href=".html">-</a>
+                <a href=".html">-</a>
+                <a href=".html">-</a>
+                <a href=".html">-</a>
+                <a href=".html">-</a>
+                <a href=".html">-</a>
+              </div>
+            </div>
+          </div>
+    </header>
+    <ul id="item-list">
+        <!-- List items will be added here -->
+    </ul>
+    <input type="text" id="new-item" placeholder="Enter an item">
+    <button onclick="addItem()">Add Item</button>
+
+    <script>
+        // Function to add a new item to the list and update the JSON file
+        function addItem() {
+            var newItemText = document.getElementById("new-item").value;
+            var itemList = document.getElementById("item-list");
+
+            if (newItemText.trim() !== "") {
+                var newItem = document.createElement("li");
+                newItem.textContent = newItemText;
+                itemList.appendChild(newItem);
+                document.getElementById("new-item").value = "";
+
+                // Add the new item to the JSON data
+                var jsonData = {
+                    items: []
+                };
+                var existingItems = JSON.parse(localStorage.getItem("listData"));
+
+                if (existingItems) {
+                    jsonData.items = existingItems;
+                }
+
+                jsonData.items.push(newItemText);
+                localStorage.setItem("listData", JSON.stringify(jsonData));
+            }
+        }
+
+        // Function to load the list from the JSON file when the page loads
+        window.onload = function() {
+            var jsonData = JSON.parse(localStorage.getItem("listData"));
+
+            if (jsonData && jsonData.items.length > 0) {
+                var itemList = document.getElementById("item-list");
+
+                jsonData.items.forEach(function(itemText) {
+                    var newItem = document.createElement("li");
+                    newItem.textContent = itemText;
+                    itemList.appendChild(newItem);
+                });
+            }
+        }
+    </script>
+    <footer>
+        <script src="main.js"></script>
+        <script src="phone.js"></script>
+    </footer>
+  </body>
+</html>
