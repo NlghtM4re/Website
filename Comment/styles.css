@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#commentInput {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#addCommentBtn {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#commentsList {
+    list-style: none;
+    padding: 0;
+}
+
+.commentItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    word-wrap: break-word;
+    max-width: 70%;
+}
+
+.commentText {
+    margin-bottom: 10px;
+}
+
+.deleteButton {
+    cursor: pointer;
+    color: red;
+    border: none;
+    background: none;
+}
