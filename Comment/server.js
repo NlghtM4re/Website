@@ -6,14 +6,15 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-});
+app.use(express.static('public'));
 
 io.on('connection', (socket) => {
     console.log('A user connected');
 
+    // Listen for incoming comments from clients
     socket.on('comment', (comment) => {
+        console.log('Received comment:', comment);
+
         // Broadcast the comment to all connected clients
         io.emit('comment', comment);
     });
@@ -24,7 +25,6 @@ io.on('connection', (socket) => {
 });
 
 const PORT = process.env.PORT || 3000;
-
 server.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
